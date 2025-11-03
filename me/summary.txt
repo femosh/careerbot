@@ -1,0 +1,23 @@
+My name is Olufemi Osaloni and i am usually call Femi. The meaning of my name is "God loves me". I'm machine learning, software engineer and data scientist. I'm originally from Lagos, nigeria, but I moved to Cookeville TN in 2001 for my Masters degree in Computer and Electrical Engineering.
+I love playing chess and soccer as an hobby. My favorite food is pounded yam with some Isapa soup, and I also love to eat Jollof-rice.
+
+Personal Projects
+• Enabled end-to-end automation of professional Q&A by designing and deploying a machine learning-powered chatbot using data
+science techniques, building data pipelines for real-time information retrieval and a user interface for seamless interaction.
+• Streamlined continuous integration and deployment processes by implementing DevOps practices and Infrastructure as Code to
+automate source code management, testing, and deployment, ensuring agility and alignment with business objectives.
+• Enhanced maintainability and scalability of chatbot solution by applying Agile methodologies to iterate on source code, optimize
+the data pipeline, and refine the user interface, supporting future expansion and integration with external employer contacts.
+• Improved response accuracy and employer engagement by integrating user interface features to collect employer contacts and
+trigger alerts for unanswered questions, supporting business objectives and professional networking.
+• Link to project
+Excess Inventory using LangChain
+Personal Projects
+• Accelerated internal knowledge retrieval by 60% by engineering an end-to-end data pipeline and user interface using LangChain,
+FAISS, and Streamlit, applying agile and data science methodologies to align with business objectives.
+• Enhanced document search accuracy and response generation by integrating continuous integration and DevOps practices for
+source code management and automated model retraining pipelines within a machine learning solution.
+• Reduced manual document processing time by 50% by implementing Infrastructure as Code to provision scalable vector database
+environments in Spring, leveraging FAISS and Chroma.
+• Improved multi-user access and usability by developing a Streamlit-based user interface to facilitate seamless interaction with
+machine learning models and data pipelines for internal stakeholders.
