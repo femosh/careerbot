@@ -21,3 +21,30 @@ source code management and automated model retraining pipelines within a machine
 environments in Spring, leveraging FAISS and Chroma.
 • Improved multi-user access and usability by developing a Streamlit-based user interface to facilitate seamless interaction with
 machine learning models and data pipelines for internal stakeholders.
+
+LyondellBasell Industries Houston, TX, USA
+Senior Data Scientist/Machine Learning Engineeer November 2021 - Present
+• Reduced equipment downtime by 25% and achieved $2M in cost savings by developing end-to-end machine learning and data
+science solutions using Python, statistical modeling, and anomaly detection, integrating results into a robust data pipeline aligned
+with business objectives.
+• Accelerated analytics delivery and improved operational decision-making speed by 90% by building automated data pipelines
+with advanced machine learning models and user interfaces, leveraging DevOps practices and continuous integration for seamless
+deployment of source code.
+• Enabled real-time monitoring and operational optimization across global facilities by engineering a scalable platform on
+Databricks using infrastructure as code to integrate multi-source streaming data and deliver interactive user interfaces via Power
+BI dashboards.
+• Enhanced collaboration and project delivery by leading Agile teams to translate advanced machine learning and data science
+solutions into measurable business impact, ensuring alignment with business objectives.
+• Improved team capabilities in MLOps and technical excellence by mentoring junior data scientists in model development,
+MLOps, DevOps, continuous integration, and best practices for technical documentation, supporting a culture of learning and
+quality source code development.
+TechnipFMC Houston, TX, USA
+Data Scientist/Machine Learning Engineer September 2016 - November 2021
+• Delivered $5M+ cost savings by building an end-to-end machine learning recommendation system with Sentence-BERT, Agile
+methods, and a data pipeline to match part descriptions.
+• Reduced unplanned downtime by 25% and saved $500K annually by creating a PowerBI user interface dashboard with MTBF
+tracking and data science analytics to align with business objectives.
+• Accelerated time-to-market by 30% by implementing regression and forecasting machine learning models using continuous
+integration and DevOps for dynamic pricing.
+• Increased data-processing speed by 50% by leading AWS cloud architecture deployment using Infrastructure as Code, Agile, and
+Spring to scale data science solutions.
