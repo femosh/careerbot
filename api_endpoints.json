@@ -1,0 +1,201 @@
+{
+  "api_info": {
+    "title": "CareerBot Employee Management API",
+    "version": "1.0.0",
+    "base_url": "http://localhost:8000",
+    "description": "A simple CRUD API for managing employee data",
+    "generated_at": "2025-11-19T19:05:51.857866"
+  },
+  "endpoints": [
+    {
+      "path": "/",
+      "method": "GET",
+      "description": "Root endpoint with API information",
+      "parameters": [],
+      "response_example": {
+        "message": "Welcome to CareerBot Employee Management API",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "path": "/employees",
+      "method": "GET",
+      "description": "Get all employees with optional pagination",
+      "parameters": [
+        {
+          "name": "skip",
+          "type": "integer",
+          "default": 0,
+          "description": "Number of records to skip"
+        },
+        {
+          "name": "limit",
+          "type": "integer",
+          "default": 100,
+          "description": "Maximum number of records to return"
+        }
+      ],
+      "response_example": [
+        {
+          "id": 1,
+          "name": "Alice Johnson",
+          "email": "alice.johnson@careerbot.com",
+          "department": "Engineering",
+          "position": "Senior Software Engineer",
+          "salary": 120000.0,
+          "hire_date": "2020-01-15"
+        }
+      ],
+      "curl_example": "curl -X GET 'http://localhost:8000/employees?skip=0&limit=10'"
+    },
+    {
+      "path": "/employees/{employee_id}",
+      "method": "GET",
+      "description": "Get a specific employee by ID",
+      "parameters": [
+        {
+          "name": "employee_id",
+          "type": "integer",
+          "required": true,
+          "description": "Employee ID"
+        }
+      ],
+      "response_example": {
+        "id": 1,
+        "name": "Alice Johnson",
+        "email": "alice.johnson@careerbot.com",
+        "department": "Engineering",
+        "position": "Senior Software Engineer",
+        "salary": 120000.0,
+        "hire_date": "2020-01-15"
+      },
+      "curl_example": "curl -X GET 'http://localhost:8000/employees/1'"
+    },
+    {
+      "path": "/employees/department/{department}",
+      "method": "GET",
+      "description": "Get all employees in a specific department",
+      "parameters": [
+        {
+          "name": "department",
+          "type": "string",
+          "required": true,
+          "description": "Department name"
+        }
+      ],
+      "response_example": [
+        {
+          "id": 1,
+          "name": "Alice Johnson",
+          "email": "alice.johnson@careerbot.com",
+          "department": "Engineering",
+          "position": "Senior Software Engineer",
+          "salary": 120000.0,
+          "hire_date": "2020-01-15"
+        }
+      ],
+      "curl_example": "curl -X GET 'http://localhost:8000/employees/department/Engineering'"
+    },
+    {
+      "path": "/employees",
+      "method": "POST",
+      "description": "Create a new employee",
+      "parameters": [],
+      "request_body": {
+        "name": "John Doe",
+        "email": "john.doe@careerbot.com",
+        "department": "Engineering",
+        "position": "Software Engineer",
+        "salary": 100000.0,
+        "hire_date": "2023-01-01"
+      },
+      "response_example": {
+        "id": 11,
+        "name": "John Doe",
+        "email": "john.doe@careerbot.com",
+        "department": "Engineering",
+        "position": "Software Engineer",
+        "salary": 100000.0,
+        "hire_date": "2023-01-01"
+      },
+      "curl_example": "curl -X POST 'http://localhost:8000/employees' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@careerbot.com\",\n    \"department\": \"Engineering\",\n    \"position\": \"Software Engineer\",\n    \"salary\": 100000.0,\n    \"hire_date\": \"2023-01-01\"\n  }'"
+    },
+    {
+      "path": "/employees/{employee_id}",
+      "method": "PUT",
+      "description": "Update an existing employee",
+      "parameters": [
+        {
+          "name": "employee_id",
+          "type": "integer",
+          "required": true,
+          "description": "Employee ID"
+        }
+      ],
+      "request_body": {
+        "salary": 125000.0,
+        "position": "Lead Software Engineer"
+      },
+      "response_example": {
+        "id": 1,
+        "name": "Alice Johnson",
+        "email": "alice.johnson@careerbot.com",
+        "department": "Engineering",
+        "position": "Lead Software Engineer",
+        "salary": 125000.0,
+        "hire_date": "2020-01-15"
+      },
+      "curl_example": "curl -X PUT 'http://localhost:8000/employees/1' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"salary\": 125000.0,\n    \"position\": \"Lead Software Engineer\"\n  }'"
+    },
+    {
+      "path": "/employees/{employee_id}",
+      "method": "DELETE",
+      "description": "Delete an employee",
+      "parameters": [
+        {
+          "name": "employee_id",
+          "type": "integer",
+          "required": true,
+          "description": "Employee ID"
+        }
+      ],
+      "response_example": {
+        "message": "Employee 1 deleted successfully"
+      },
+      "curl_example": "curl -X DELETE 'http://localhost:8000/employees/1'"
+    }
+  ],
+  "schemas": {
+    "Employee": {
+      "id": "integer (auto-generated)",
+      "name": "string (required)",
+      "email": "string (required, unique, valid email)",
+      "department": "string (required)",
+      "position": "string (required)",
+      "salary": "float (required)",
+      "hire_date": "date (required, format: YYYY-MM-DD)"
+    },
+    "EmployeeCreate": {
+      "name": "string (required)",
+      "email": "string (required, unique, valid email)",
+      "department": "string (required)",
+      "position": "string (required)",
+      "salary": "float (required)",
+      "hire_date": "date (required, format: YYYY-MM-DD)"
+    },
+    "EmployeeUpdate": {
+      "name": "string (optional)",
+      "email": "string (optional, unique, valid email)",
+      "department": "string (optional)",
+      "position": "string (optional)",
+      "salary": "float (optional)",
+      "hire_date": "date (optional, format: YYYY-MM-DD)"
+    }
+  },
+  "common_responses": {
+    "200": "Success",
+    "201": "Created",
+    "404": "Not Found - Resource does not exist",
+    "422": "Validation Error - Invalid request data"
+  }
+}

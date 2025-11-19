@@ -4,3 +4,10 @@ gradio
 pypdf
 openai
 openai-agents
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
+dash
+plotly
+pandas

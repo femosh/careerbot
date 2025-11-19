@@ -125,3 +125,7 @@ dmypy.json
 # Gradio
 .gradio/
 flagged/
+
+# SQLite databases
+*.db
+careerbot.db
